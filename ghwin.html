@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Winners Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: #111;
+      padding: 20px;
+      display: flex;
+      justify-content:space-between ;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo svg {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo svg:hover {
+      transform: rotate(180deg);
+    }
+
+    .logo span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .cancel-btn:hover {
+      color: #f35de4;
+    }
+
+.cancel-btn {
+  background: #8d06ab;
+  color: white;
+  padding: 0 14px;          /* فقط padding جانبي */
+  height: 40px;             /* نفس ارتفاع الروابط */
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+
+
+
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 20px;
+      background: #1c1c1c;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+      padding: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 2rem;
+    }
+
+    .hero-text span {
+      color: #3498db;
+    }
+
+    .hero-text p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+  
+    .highlight {
+  color: #00ff00 !important;
+}
+
+
+    .hero-img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-img:hover {
+      transform: scale(1.05);
+    }
+
+    .reservation {
+      padding: 40px 20px;
+      background: #af00ce;
+      border-radius: 40px;
+      margin: 40px auto;
+      max-width: 700px;
+      transition: background 0.3s ease;
+     transition: transform 0.3s ease-in-out;
+    }
+
+    .reservation:hover {
+      background: #a349a4;
+      transform: scale(1.05);
+     
+    }
+
+    .reservation form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .reservation h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .reservation label {
+      margin-top: 10px;
+    }
+
+    .reservation input {
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      background: #8d06ab;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #f35de4;
+    }
+
+    .chambre-offres {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+    }
+
+    .pp2 {
+      width: 260px;
+      height: 300px;
+      background: #af00ce;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .pp2:hover {
+      transform: scale(1.05);
+    }
+
+    .pp2-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid white;
+    }
+
+    .pp2-text h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .pp2-text p {
+      font-size: 0.9rem;
+      color: #eee;
+    }
+
+    .pp2-button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #8d06ab;
+      color: white;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .pp2-button:hover {
+      background: #f35de4;
+    }
+
+    .services {
+      padding: 40px 20px;
+      background: #111;
+    }
+
+    .services h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .services ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #888;
+    }
+    
+   .lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  transition: all 0.3s ease;
+   white-space: nowrap;
+    flex-shrink: 1;   /* يخليهم يتقلصوا */
+  min-width: 0;     /* يمنعهم من كسر التصميم */
+}
+.lang-btn {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;    /* font-semibold */
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: #f35de4fd;
+}
+
+.divider {
+  color: #aaa; /* text-gray-400 */
+}
+
+
+ .nowarper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+    @media (max-width: 768px) {
+     .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  display: flex;           
+  align-items: center;       
+  height: 40px;               
+  padding: 0 10px;           
+}
+
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-img {
+        margin-top: 20px;
+        width: 250px;
+      }
+    
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <svg viewBox="0 0 82 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M81.3594 17.6938L67.583 0.441608L31.9918 0.207479L45.7681 17.4597L31.766 34.5292L17.9896 17.277L31.9918 0.207479L14.3408 0.091367L0.33868 17.1609L14.115 34.4131L0.112903 51.4826L13.8893 68.7348L49.6252 68.9699L35.7041 51.7167L49.851 34.6482L63.6273 51.9004L49.6252 68.9699L67.1314 69.0851L81.1336 52.0156L67.3572 34.7633L81.3594 17.6938Z" fill="white"/>
+      </svg>
+      <span>Winners Hotel</span>
+    </div>
+    <nav>
+      <div class="nowarper">
+      <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#" id="go-to-form">Réserver</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#" class="cancel-btn" id="cancel-reservation">Annuler réservation</a></li>
+      </ul>
+      
+    <div class="lang-switcher">
+  <button class="lang-btn">AR</button>
+  <span class="divider">|</span>
+  <button class="lang-btn">FR</button>
+</div>
+</div>
+  </header>
+
+  <!-- Hero -->
+ <section class="hero">
+  <div class="hero-text">
+    <h2>
+      <span style="color:#3498db !important">Welcome</span>
+      to
+      <span style="color:#3498db !important">Winners Hotel</span>
+    </h2>
+    <p>
+      Where <span class="highlight">comfort</span> meets
+      <span class="highlight">luxury</span>. Enjoy your stay.
+    </p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="hotel" class="hero-img">
+</section>
+
+
+  <!-- Reservation Form -->
+   <!-- Reservation Form -->
+<section class="reservation">
+    <form id="reservation-form" method="POST">
+
+    <h3>Réserver une chambre</h3>
+
+    <label>Nom</label>
+    <input type="text" name="nom" placeholder="Votre nom" required>
+
+    <label>Prénom</label>
+    <input type="text" name="prenom" placeholder="Votre prénom" required>
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Votre email" required>
+
+    <label>Téléphone</label>
+    <input type="text" name="telephone" placeholder="Votre numéro" required>
+
+    <label>Arrivée</label>
+    <input type="date" name="arrivee" required>
+
+    <label>Départ</label>
+    <input type="date" name="depart" required>
+
+    <label>Adultes</label>
+    <input type="number" name="adultes" placeholder="Ex: 2" required>
+
+    <label>Enfants</label>
+    <input type="number" name="enfants" placeholder="Ex: 1" required>
+
+    <button type="submit" class="btn">Rechercher</button>
+  </form>
+</section>
+
+
+  <!-- Room Offers -->
+  <section class="chambre-offres">
+    <div class="pp2">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" class="pp2-img" alt="room" />
+      <div class="pp2-text">
+        <h3>Chambre Double</h3>
+        <p>À partir de <strong>$150</strong></p>
+        <a href="#" class="pp2-button">Réserver</a>
+      </div>
+    </div>
+
+    <div class="pp2">
+      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32" class="pp2-img" alt="piscine" />
+      <div class="pp2-text">
+        <h3>Piscine</h3>
+        <p>Accès inclus</p>
+        <a href="#" class="pp2-button">Réserver</a>
+      </div>
+    </div>
+
+    <div class="pp2">
+      <img src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100" class="pp2-img" alt="suite" />
+      <div class="pp2-text">
+        <h3>Suite VIP</h3>
+        <p>À partir de <strong>$300</strong></p>
+        <a href="#" class="pp2-button">Réserver</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+   <section class="services" id="services">
+    <h3>Nos Services</h3>
+    <ul>
+      <li>🍽️ Restaurant étoilé</li>
+      <li>🏊 Piscine chauffée</li>
+      <li>🏋️ Salle de sport</li>
+      <li>📶 WiFi gratuit</li>
+      <li>🛏️ Lits pour enfants</li>
+      <li>🚐 Navette</li>
+    </ul>
+  </section>
+
+
+  <script>
+  // 📩 إرسال الفورم إلى Formspree بدون مغادرة الصفحة
+  document.querySelector("#reservation-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // التحقق من أن جميع الحقول ممتلئة
+    let allFilled = true;
+    for (let [_, value] of formData.entries()) {
+      if (!value.trim()) {
+        allFilled = false;
+        break;
+      }
+    }
+
+    if (!allFilled) {
+      alert("⚠️ يرجى ملء جميع الحقول قبل الإرسال.");
+      return;
+    }
+
+    // الإرسال إلى Formspree
+    const response = await fetch("https://formspree.io/f/mgvyqdoo", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      alert("✅ تم إرسال طلبك بنجاح، سنؤكد الحجز عبر الهاتف أو البريد.");
+      form.reset();
+    } else {
+      alert("❌ حدث خطأ أثناء إرسال الطلب، حاول مجددًا.");
+    }
+  });
+
+  // ⬇️ عند الضغط على "Réserver" في كروت العروض ينزل للفورم
+  const reserveButtons = document.querySelectorAll(".pp2-button");
+  reserveButtons.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".reservation").scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  // ⬇️ عند الضغط على "Réserver" في القائمة العلوية ينزل للفورم
+  document.querySelector("#go-to-form").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".reservation").scrollIntoView({ behavior: "smooth" });
+  });
+
+  // ❌ عند الضغط على "Annuler réservation" يمسح الحقول ويظهر رسالة
+  document.querySelector("#cancel-reservation").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // مسح الحقول
+    const inputs = document.querySelectorAll(".reservation input");
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+
+    // رسالة إلغاء
+    alert("❌ تم إلغاء الحجز بنجاح.");
+
+    // النزول للفورم
+    document.querySelector(".reservation").scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Winners Hotel. Tous droits réservés.</p>
+</footer>
+
+
+</body>
+</html>
+
+
+
