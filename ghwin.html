@@ -72,8 +72,8 @@ html {
 .cancel-btn {
   background: #8d06ab;
   color: white;
-  padding: 0 14px;          /* فقط padding جانبي */
-  height: 40px;             /* نفس ارتفاع الروابط */
+  padding: 0 14px;        
+  height: 40px;             
   border-radius: 20px;
   font-weight: 600;
   display: flex;
@@ -296,7 +296,7 @@ html {
 }
 
 .divider {
-  color: #aaa; /* text-gray-400 */
+  color: #aaa; 
 }
 
 
@@ -460,7 +460,7 @@ html {
 
 
   <script>
-  // 📩 إرسال الفورم إلى Formspree بدون مغادرة الصفحة
+  //   إرسال الفورم إلى الايمايلFormspree بدون مغادرة الصفحة
   document.querySelector("#reservation-form").addEventListener("submit", async function (e) {
     e.preventDefault();
 
@@ -498,7 +498,7 @@ html {
     }
   });
 
-  // ⬇️ عند الضغط على "Réserver" في كروت العروض ينزل للفورم
+  //  عند الضغط على "Réserver" في كروت العروض ينزل للفورم
   const reserveButtons = document.querySelectorAll(".pp2-button");
   reserveButtons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
