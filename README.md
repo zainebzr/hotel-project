@@ -1,7 +1,8 @@
 <h2>Hi, I'm Zaineb! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35" /></h2>
 
 
-<img align="right" src="https://lottie.host/8efb6b29-2df8-437b-9796-36467aa7db3e/Vl2R6sToIv.gif" width="230"/>
+<img align="right" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" width="230"/>
+
 
 
 
