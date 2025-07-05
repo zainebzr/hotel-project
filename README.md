@@ -1,7 +1,7 @@
 <h2>Hi, I'm Zaineb! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35" /></h2>
 
 
-<img align="right" src="https://i.imgur.com/YQvQk0z.png" width="230" alt="Cute female developer" />
+<img align='right' src="https://media.giphy.com/media/ieyl9zmCjO4b4t6qoY/giphy.gif" width="230">
 
 
 
