@@ -2,6 +2,7 @@
 
 <img align="right" src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="230"/>
 
+
 <p><em>A passionate Front-End Developer from Algeria 🇩🇿<br>
 This repository features one of my first real-world projects: a modern, responsive hotel booking website.</em></p>
 
