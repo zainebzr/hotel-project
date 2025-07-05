@@ -1,6 +1,7 @@
 <h2>Hi, I'm Zaineb! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35" /></h2>
 
-<img align="right" src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="230"/>
+<img align="right" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="230"/>
+
 
 
 <p><em>A passionate Front-End Developer from Algeria 🇩🇿<br>
